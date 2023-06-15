@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: dummy-slack prod
+    branch: main
+    env: node
+    plan: starter
+    region: frankfurt
+    buildCommand: npm i
+    startCommand: npm run server
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SLACK_TOKE
+        sync: false
+      - key: SLACK_SECRET
+        sync: false
+      - key: SLACK_APP_TOKEN
+        sync: false
