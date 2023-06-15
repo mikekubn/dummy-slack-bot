@@ -48,4 +48,8 @@ app.command("/brno", async ({ command, ack, say }) => {
   }
 });
 
-app.start(3000);
+(async () => {
+  await app.start(process.env.PORT || 3000);
+
+  console.log('⚡️ Bolt app is running!');
+})();
