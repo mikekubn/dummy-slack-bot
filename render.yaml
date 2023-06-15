@@ -3,7 +3,6 @@ services:
     name: dummy-slack prod
     branch: main
     env: node
-    plan: starter
     region: frankfurt
     buildCommand: npm i
     startCommand: npm run server
